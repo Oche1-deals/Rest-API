@@ -1,8 +1,15 @@
 package com.oche.rest.webservices.restful_web_service.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
     private String filed1;
+
     private String filed2;
+    //@JsonIgnore
     private String filed3;
 
     public SomeBean(String filed1, String filed2, String filed3) {
